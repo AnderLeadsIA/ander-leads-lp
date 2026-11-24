@@ -49,3 +49,10 @@ img{max-width:100%}
  .reveal-pending{opacity:1;transform:none}
  .button:hover,.button:hover>span{transform:none}
 }
+
+/* Clear explanation of AI selection for local businesses. */
+.process-intro{font-size:17px;line-height:1.7;max-width:760px;margin:0 0 24px}
+.tool-names{display:flex;flex-wrap:wrap;gap:9px}
+.tool-names span{border:1px solid #1114;border-radius:4px;padding:7px 13px;font-size:12px;font-weight:700;background:#ffffff40}
+.process-scope{font-size:12px;line-height:1.7;max-width:760px;margin:30px 0 0;color:#393300}
+@media(max-width:760px){.process-intro{font-size:16px}.tool-names span{font-size:11px;padding:7px 11px}}
