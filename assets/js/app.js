@@ -30,3 +30,51 @@ if (!motionPreference.matches && 'IntersectionObserver' in window) {
     }
   });
 }
+
+// Manual carousel: keyboard, touch swipe, and explicit controls; no auto-play.
+const bobCarousel = document.querySelector('.bob-carousel');
+if (bobCarousel) {
+  const slides = [...bobCarousel.querySelectorAll('.bob-slide')];
+  const tabs = [...bobCarousel.querySelectorAll('[data-slide]')];
+  const controls = bobCarousel.querySelector('.carousel-controls');
+  const status = bobCarousel.querySelector('.carousel-status');
+  const labels = ['BOB CRM', 'BOB INSTA', 'Avaliações no Google — em implementação'];
+  let activeSlide = 0;
+  function showBobSlide(index, announce = true) {
+    activeSlide = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.hidden = i !== activeSlide;
+      slide.classList.toggle('carousel-enter', i === activeSlide);
+    });
+    tabs.forEach((button, i) => button.setAttribute('aria-pressed', String(i === activeSlide)));
+    if (announce) status.textContent = `${activeSlide + 1} de ${slides.length} — ${labels[activeSlide]}`;
+  }
+  controls.hidden = false;
+  status.hidden = false;
+  showBobSlide(0, false);
+  tabs.forEach((button, i) => button.addEventListener('click', () => showBobSlide(i)));
+  bobCarousel.querySelector('[data-carousel-prev]').addEventListener('click', () => showBobSlide(activeSlide - 1));
+  bobCarousel.querySelector('[data-carousel-next]').addEventListener('click', () => showBobSlide(activeSlide + 1));
+  controls.addEventListener('keydown', event => {
+    let next;
+    if (event.key === 'ArrowRight') next = activeSlide + 1;
+    else if (event.key === 'ArrowLeft') next = activeSlide - 1;
+    else if (event.key === 'Home') next = 0;
+    else if (event.key === 'End') next = slides.length - 1;
+    else return;
+    event.preventDefault();
+    showBobSlide(next);
+    tabs[activeSlide].focus();
+  });
+  let touchStart;
+  bobCarousel.querySelector('.carousel-slides').addEventListener('touchstart', event => {
+    touchStart = event.touches.length === 1 ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
+  }, { passive: true });
+  bobCarousel.querySelector('.carousel-slides').addEventListener('touchend', event => {
+    if (!touchStart || !event.changedTouches.length) return;
+    const dx = event.changedTouches[0].clientX - touchStart.x;
+    const dy = event.changedTouches[0].clientY - touchStart.y;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) showBobSlide(activeSlide + (dx < 0 ? 1 : -1));
+    touchStart = null;
+  }, { passive: true });
+}

@@ -39,3 +39,11 @@ Abra `index.html` no navegador ou execute `python -m http.server 8765` nesta pas
 WhatsApp: (11) 91562-7350. Instagram: @anderleads.ia.
 
 A solicitação de avaliações no Google está em implementação no BOB CRM e aparece identificada dessa forma. A verba de anúncios é separada da mensalidade de gestão. Não há ferramentas de rastreamento instaladas; os cliques preparam eventos distintos no dataLayer para configuração posterior.
+
+## Carrossel dos sistemas BOB
+
+A seção `#sistemas` mostra BOB CRM, BOB INSTA e a prévia de avaliações no Google (em implementação). Navegação manual por botões, teclado e gesto horizontal no celular, sem rotação automática. Sem JavaScript, todos os conteúdos permanecem disponíveis.
+
+BOB CRM continua incluso no Plano Completo. A disponibilidade e os valores do BOB INSTA são combinados à parte. Ambos os sistemas estão em constante atualização.
+
+Arte original do BOB INSTA: `artes/bob-insta.png`. Versão otimizada para o site: `assets/img/bob-insta.webp`. Criada pela ferramenta integrada de geração de imagens com as referências fornecidas.

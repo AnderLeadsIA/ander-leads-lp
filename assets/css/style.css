@@ -56,3 +56,32 @@ img{max-width:100%}
 .tool-names span{border:1px solid #1114;border-radius:4px;padding:7px 13px;font-size:12px;font-weight:700;background:#ffffff40}
 .process-scope{font-size:12px;line-height:1.7;max-width:760px;margin:30px 0 0;color:#393300}
 @media(max-width:760px){.process-intro{font-size:16px}.tool-names span{font-size:11px;padding:7px 11px}}
+
+/* BOB systems: manual, accessible carousel with no automatic rotation. */
+[hidden]{display:none!important}
+.systems-heading{max-width:780px;margin-bottom:32px}
+.systems-heading>p:not(.eyebrow){font-size:17px;line-height:1.7;color:#c7c7c1}
+.update-label{display:inline-block;color:#ffd600;font-size:14px;border:1px solid #ffd60055;padding:8px 12px;border-radius:5px}
+.carousel-controls{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.carousel-tabs,.carousel-navigation{display:flex;gap:8px;flex-wrap:wrap}
+.carousel-controls button{border:1px solid #ffffff40;background:transparent;color:#eee;border-radius:5px;padding:11px 15px;min-height:44px;cursor:pointer;font-size:14px}
+.carousel-tabs button[aria-pressed=true]{background:#ffd600;border-color:#ffd600;color:#111;font-weight:700}
+.carousel-tabs button[data-slide="1"][aria-pressed=true]{background:#ec4899;border-color:#ec4899;color:#111}
+.carousel-controls button:hover{border-color:#fff}
+.bob-slide{border:1px solid #ffffff26;background:#101110;border-radius:9px;padding:28px;margin-bottom:24px}
+.bob-slide-copy{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;margin-bottom:24px}
+.system-tag{color:#ffd600;font-size:14px;font-weight:700;letter-spacing:.5px}
+.bob-slide h3{font-size:clamp(24px,3vw,34px);line-height:1.2;margin:14px 0;letter-spacing:-.8px}
+.crm .bob-slide p{font-size:16px;max-width:none;line-height:1.7}
+.system-points{font-size:16px;margin:0;color:#ddd}
+.system-points li{padding-bottom:14px}
+.system-points li:before{color:#ffd600}
+.system-art{margin:0}.system-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#111;border-radius:6px}
+.system-art figcaption{font-size:13px;line-height:1.6;color:#c3c3ba;margin-top:12px}
+.crm p.system-footnote{font-size:14px;color:#ffd600;margin-bottom:0}
+.insta-slide{border-color:#ec489955}.insta-slide .system-tag,.insta-slide .system-points li:before,.crm .insta-slide .system-footnote{color:#f88abd}
+.development-note{padding:20px;border:1px solid #ffd60055;border-radius:6px;color:#deded5}.development-note strong{display:block;color:#ffd600;margin-bottom:6px}
+.crm .carousel-status{font-size:14px;color:#bfbfb6;margin:12px 0 0}
+.systems-contact{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:28px}.crm .systems-contact p{font-size:16px;max-width:500px}.systems-contact .button{font-size:12px;flex-shrink:0}
+@media(max-width:760px){.bob-slide{padding:18px}.bob-slide-copy{grid-template-columns:1fr;gap:16px}.carousel-controls{gap:12px}.carousel-tabs{width:100%}.carousel-tabs button{flex:1 1 auto;padding:10px;font-size:13px}.carousel-navigation{width:100%;justify-content:space-between}.carousel-navigation button{font-size:14px}.system-tag{font-size:12px}.bob-slide h3{font-size:27px}.systems-contact{align-items:stretch;flex-direction:column;gap:12px}.systems-contact .button{justify-content:center;text-align:center}.system-points{font-size:16px}.update-label{font-size:13px}.system-art figcaption{font-size:13px}}
+@media(prefers-reduced-motion:no-preference){.bob-slide.carousel-enter{animation:bob-enter .3s ease-out}@keyframes bob-enter{from{opacity:.3;transform:translateY(7px)}to{opacity:1;transform:none}}}
