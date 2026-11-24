@@ -39,7 +39,7 @@ if (bobCarousel) {
   const controls = bobCarousel.querySelector('.carousel-controls');
   const status = bobCarousel.querySelector('.carousel-status');
   const toggle = bobCarousel.querySelector('[data-carousel-toggle]');
-  const labels = ['BOB CRM', 'BOB INSTA', 'Avaliações no Google — em implementação'];
+  const labels = ['BOB CRM', 'BOB INSTA', 'Avaliações no Google — recurso ativo'];
   let activeSlide = 0;
   let timer;
   let playing = !motionPreference.matches;
