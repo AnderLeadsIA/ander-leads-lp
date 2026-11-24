@@ -42,7 +42,7 @@ A solicitação de avaliações no Google está em implementação no BOB CRM e 
 
 ## Carrossel dos sistemas BOB
 
-A seção `#sistemas` mostra BOB CRM, BOB INSTA e a prévia de avaliações no Google (em implementação). Navegação manual por botões, teclado e gesto horizontal no celular, sem rotação automática. Sem JavaScript, todos os conteúdos permanecem disponíveis.
+A seção `#sistemas` mostra BOB CRM, BOB INSTA e a prévia de avaliações no Google (em implementação). Troca automática a cada 8 segundos, com imagem primeiro e explicação abaixo. Possui botão Pausar/Reproduzir, navegação manual por botões, teclado e gesto horizontal no celular. Pausa ao passar o mouse, ao focar controles, ao tocar, quando a aba está oculta ou quando o carrossel está fora da tela. A navegação manual pausa a reprodução até a pessoa escolher Reproduzir. A preferência de movimento reduzido desativa o início automático. Sem JavaScript, todos os conteúdos permanecem disponíveis.
 
 BOB CRM continua incluso no Plano Completo. A disponibilidade e os valores do BOB INSTA são combinados à parte. Ambos os sistemas estão em constante atualização.
 
